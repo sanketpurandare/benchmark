@@ -23,6 +23,7 @@ class HuggingFaceModel(BenchmarkModel):
     HF_MODEL = True
     # Default eval precision on CUDA device is fp16(half mode)
     DEFAULT_EVAL_CUDA_PRECISION = "fp16"
+    
 
     # If you suffix a model with '_generate', we will instead wrap the
     # unsuffixed model with GenerationWrapper which will make it do

@@ -107,6 +107,36 @@ HUGGINGFACE_MODELS = {
         "LlamaConfig(num_hidden_layers=16)",
         "AutoModelForCausalLM",
     ),
+    "tinyllama": (
+        2048,
+        2048,
+        'AutoConfig.from_pretrained("TinyLlama/TinyLlama_v1.1", trust_remote_code=True)',
+        "LlamaForCausalLM",
+    ),
+    "gemma_2b": (
+        2048,
+        2048,
+        'AutoConfig.from_pretrained("google/gemma-2b", trust_remote_code=True, revision="float16")',
+        "AutoModelForCausalLM",
+    ),
+    "open_llama_3b": (
+        2048,
+        2048,
+        'AutoConfig.from_pretrained("openlm-research/open_llama_3b", trust_remote_code=True, torch_dtype="float16")',
+        "AutoModelForCausalLM",
+    ),
+    "moondream2": (
+        1024,
+        1024,
+        'PhiConfig.from_pretrained("vikhyatk/moondream2", torch_dtype="float16")',
+        "PhiForCausalLM",
+    ),
+    "tinyllava": (
+        2048,
+        2048,
+        'AutoConfig.from_pretrained("bczhou/tiny-llava-v1-hf", trust_remote_code=True)',
+        "LlavaForConditionalGeneration",
+    ),
     "hf_MPT_7b_instruct": (
         512,
         512,
